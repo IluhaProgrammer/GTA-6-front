@@ -1,0 +1,56 @@
+.wrapper {
+    @apply w-screen min-h-screen relative;
+}
+
+.wrapper > form {
+    @apply w-max p-3 absolute left-5 top-5; 
+    animation: slideIn 2s ease-in-out;
+}
+.wrapper > form> h1 {
+    @apply text-2xl mb-3;
+}
+
+.wrapper > form > input{
+    @apply block py-1.5 px-3 mb-3 w-full border border-transparent bg-black/30 placeholder:text-white/60 outline-none;
+    transition: border-color .4s linear;
+}
+
+.wrapper > form > input:focus{
+    @apply border-[#ffb3c0]
+}
+
+.wrapper > form > button {
+    @apply text-lg font-medium uppercase py-1 px-4 border border-white inline-block mt-2 bg-transparent;
+    transition: box-shadow .35s linear, background-color 0.4s linear ;
+}
+
+.wrapper > form > button:hover{
+    @apply bg-white/20;
+}
+
+.success {
+    @apply text-green-400 text-2xl font-medium m-auto;
+    animation: fade 0.4s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-110%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
